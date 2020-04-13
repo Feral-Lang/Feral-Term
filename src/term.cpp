@@ -44,7 +44,6 @@ var_base_t * term_height_native( vm_state_t & vm, const fn_data_t & fd )
 INIT_MODULE( term )
 {
 	var_src_t * src = vm.src_stack.back();
-	const std::string & src_name = src->src()->path();
 	src->add_nativefn( "term_width_native", term_width_native );
 	src->add_nativefn( "term_height_native", term_height_native );
 	return true;

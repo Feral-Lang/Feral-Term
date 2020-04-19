@@ -44,7 +44,7 @@ var_base_t * term_height_native( vm_state_t & vm, const fn_data_t & fd )
 INIT_MODULE( term )
 {
 	var_src_t * src = vm.current_source();
-	src->add_nativefn( "term_width_native", term_width_native );
-	src->add_nativefn( "term_height_native", term_height_native );
+	src->add_native_fn( "term_width_native", term_width_native );
+	src->add_native_fn( "term_height_native", term_height_native );
 	return true;
 }

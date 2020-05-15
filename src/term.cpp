@@ -9,7 +9,7 @@
 
 #include <sys/ioctl.h>
 
-#include <feral/VM/VM.hpp>
+#include "feral/VM/VM.hpp"
 
 var_base_t * term_width_native( vm_state_t & vm, const fn_data_t & fd )
 {

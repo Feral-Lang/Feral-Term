@@ -1,10 +1,7 @@
-let os = import('std/os');
-let vec = import('std/vec');
-let sys = import('std/sys');
-let builder = import('std/builder');
+let io = import('std/io');
+let fmt = import('std/fmt');
+let cmake = import('std/cmake_gen');
 
-let build = builder.new().make_dll();
-
-build.add_src('src/term.cpp');
-
-sys.exit(build.perform('term'));
+let builder = cmake.new('term');
+let term_lib = builder.add_shared_lib('term');
+builder.gen();
